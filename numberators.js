@@ -10,10 +10,8 @@ let number;
 let Attempts = 10;
 attempts.innerHTML = Attempts;
 
-check.addEventListener('click', (event) => {
-    if (enteredNumber.value == '') {
-        tempResultText.innerHTML = "PLEASE ENTER A NUMBER."
-    } else {
+function numberator(event) {
+   if(event){
         event.preventDefault();
         Attempts--;
         attempts.innerHTML = Attempts;
@@ -22,9 +20,8 @@ check.addEventListener('click', (event) => {
         }
         number = enteredNumber.value
         checkEnteredNumber(number);
-        enteredNumber.value = "";
     }
-});
+}
 
 function activateResultBox(msg1) {
     resultBox.classList.add('active');
@@ -34,7 +31,10 @@ function activateResultBox(msg1) {
 }
 
 function checkEnteredNumber(num) {
-    if (num == randomNumber) {
+    if(isNaN(num)){
+        tempResultText.innerHTML = "GUSSED NUMBER IS NOT A NUMBER."
+    }
+    else if (num == randomNumber) {
         activateResultBox('CONGRATS YOU HAVE WON THE GAME.');
     } else if (num > randomNumber){
         tempResultText.innerHTML = "GUSSED NUMBER IS LARGE."
