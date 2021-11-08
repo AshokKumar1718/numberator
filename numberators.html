@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="numberators.css">
+    </head>
+    <body>
+        <div  class="attempt">
+            <div class="attempt_box center active" id="attempt_count">
+                <h2>NO.OF.ATTEMPTS</h2>
+                <div class="attempt_count center">
+                    <p id="attempts" class="count_circle center"></p>
+                </div>
+            </div>
+        </div>
+        <div class="center" style="color: white;">
+            <h1>NUMBER GUESSING GAME</h1>
+        </div>
+        <div class="game center">
+            <div class="game_box center" style="margin-top: -500px;">
+                <p>Guess the number between 1 - 100</p>
+                <p>Enter the number: </p>
+                <form action="" class="center">
+                    <input  class ="input" type="text" id="entered_number" required>
+                    <button type="submit" id="submit" class="submit_buttion">Check</button>
+                </form>
+                <p id="temp_result"></p>
+            </div>
+        </div>
+        <div class="result center" id="result_box">
+            <h1 id="result"></h1>
+        </div>
+    </body>
+    <script rel="stylesheet" src="numberators.js"></script>
+</html>
